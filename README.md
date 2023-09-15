@@ -67,8 +67,8 @@ Then run the live server on 'http://localhost:3000/'
 
 👤 **Mahmoud Bakr**
 
-- GitHub: [@githubhandle](https://github.com/MahmoudBakr23)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/m-bakr/)
+- GitHub: [@MahmoudBakr23](https://github.com/MahmoudBakr23)
+- LinkedIn: [Mahmoud Bakr](https://www.linkedin.com/in/m-bakr/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

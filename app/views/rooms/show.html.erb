@@ -6,3 +6,15 @@
 
 <h2>Reserve this Room</h2>
 <%= render 'reservations/form', room: @room, start_date: @start_date, end_date: @end_date %>
+
+  <% if flash[:notice].present? %>
+  <div class="custom-notice">
+    <%= flash[:notice] %>
+  </div>
+  <% end %>
+
+<% if flash[:alert].present? %>
+  <div class="custom-alert">
+    <%= flash[:alert] %>
+  </div>
+<% end %>

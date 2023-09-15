@@ -14,4 +14,15 @@
       <% end %>
     </span>
   </p>
+  <% if flash[:notice].present? %>
+  <div class="custom-notice">
+    <%= flash[:notice] %>
+  </div>
+  <% end %>
+
+<% if flash[:alert].present? %>
+  <div class="custom-alert">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
 <% end %>
