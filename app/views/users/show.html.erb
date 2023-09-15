@@ -1,0 +1,17 @@
+<h1>Your Profile</h1>
+
+<p>Email: <%= @user.email %></p>
+
+<h2>Your Reservations</h2>
+<% @user.reservations.each do |reservation| %>
+  <p>
+    Room Number: <%= reservation.room.number %>,
+    Start Date: <%= reservation.start_date %>,
+    End Date: <%= reservation.end_date %>,
+    <span>
+      <%= form_with model: reservation, url: reservation_path(reservation), method: :delete, data: { confirm: 'Are you sure?' } do |form| %>
+        <%= form.submit 'Cancel Reservation', class: 'cancel-button' %>
+      <% end %>
+    </span>
+  </p>
+<% end %>

@@ -1,0 +1,3 @@
+class SingleRoom < Room
+    
+end

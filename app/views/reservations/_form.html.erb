@@ -1,0 +1,14 @@
+<%= form_with(model: @reservation, local: true) do |form| %>
+  <div class="field">
+    <%= form.hidden_field :room_id, value: room.id %>
+  </div>
+  <div class="field">
+    <%= form.label :start_date, 'Start Date:' %>
+    <%= form.text_field :start_date, placeholder: 'YYYY-MM-DD' %>
+  </div>
+  <div class="field">
+    <%= form.label :end_date, 'End Date:' %>
+    <%= form.text_field :end_date, placeholder: 'YYYY-MM-DD' %>
+  </div>
+  <%= form.submit 'Reserve' %>
+<% end %>

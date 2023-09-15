@@ -1,0 +1,8 @@
+<h1>Room Details</h1>
+
+<p>Room Number: <%= @room.number %></p>
+<p>Type: <%= @room.type %></p>
+<p>Price per Night: <%= @room.price %></p>
+
+<h2>Reserve this Room</h2>
+<%= render 'reservations/form', room: @room, start_date: @start_date, end_date: @end_date %>

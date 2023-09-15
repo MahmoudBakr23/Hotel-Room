@@ -1,0 +1,3 @@
+class DoubleRoom < Room
+
+end

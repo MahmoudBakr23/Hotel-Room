@@ -1,0 +1,3 @@
+class Suite < Room
+    
+end

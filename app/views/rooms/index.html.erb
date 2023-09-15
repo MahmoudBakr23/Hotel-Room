@@ -1,0 +1,29 @@
+<h1>Available Rooms</h1>
+
+<%= form_tag rooms_path, method: :get do %>
+  <%= label_tag 'start_date', 'Start Date: ' %>
+  <%= text_field_tag 'start_date', @start_date, placeholder: 'YYYY-MM-DD' %>
+  
+  <%= label_tag 'end_date', 'End Date: ' %>
+  <%= text_field_tag 'end_date', @end_date, placeholder: 'YYYY-MM-DD' %>
+  
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
+<% if @start_date.present? && @end_date.present? %>
+  <h2>Available Rooms from <%= @start_date %> to <%= @end_date %></h2>
+  <% if @available_rooms.any? %>
+    <ul>
+      <% @available_rooms.each do |room| %>
+        <li>
+          Room Number: <%= room.number %>,
+          Type: <%= room.type %>,
+          Price per Night: <%= room.price %>,
+          <%= link_to 'show this room', room_path(room) %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No available rooms for the selected date range.</p>
+  <% end %>
+<% end %>
